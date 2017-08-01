@@ -1,0 +1,280 @@
+
+
+
+
+                                    /*-----------MainUI-----------*/
+
+/* ---------------- Left Pane ------------- */
+.left-pane {
+    -fx-background-color: #364150;
+}
+#user-label {
+    -fx-text-fill: #f1f1f1;
+    -fx-font-weight: bold;
+}
+.accordian {
+    -fx-background-color: transparent;
+    -fx-border-width: 0px;
+}
+.titled-pane {
+    -fx-animated: true;
+}
+.titled-pane .title {
+    -fx-background-color: transparent;
+    -fx-pref-height: 40px;
+}
+.titled-pane .title:hover {
+    -fx-background-color: #3E4B5C;
+}
+.titled-pane .title .arrow-button {
+    -fx-background-color: transparent;
+    
+}
+.titled-pane .title .arrow-button .arrow {
+    -fx-background-color: #f1f1f1;
+}
+.titled-pane:expanded .title {
+    -fx-background-color: #3E4B5C;
+}
+.titled-pane .title .text {
+    -fx-text-fill: #f1f1f1;
+    -fx-font-weight: bold;
+    -fx-translate-y: -7;
+}
+.titled-pane .content {
+    -fx-background-color: #3E4B5C;
+    -fx-border-width: 0px;
+}
+
+.toggle-button {
+    -fx-alignment: CENTER_LEFT;
+    -fx-background-color: transparent;
+    -fx-text-fill: #f1f1f1;
+    -fx-font-weight: bold;
+}
+.toggle-button:hover {
+    -fx-background-color: #3A4656;
+    -fx-cursor: hand;
+}
+.toggle-button .text {
+    -fx-translate-x: 20;
+}
+
+
+/* ------------ Right Pane ---------- */
+.header-pane {
+    -fx-background-color: #EEF1F9;
+}
+.lbl-heager{
+    -fx-font-size : 18px;
+    -fx-font-weight : bold;
+    
+}
+#signout-button {
+    -fx-background-color:#E26A6A;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+     -fx-pref-width: 80px;
+    -fx-pref-height: 30px;
+    
+/*    -fx-pref-width: 90px;
+    -fx-pref-height: 20px;
+    -fx-background-color: #E7505A;
+    -fx-background-radius: 20px;
+    -fx-background-insets: 0px 0px 0px 0px;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-border-width: 5px;
+    -fx-border-radius: 15px;
+    -fx-border-color: rgba(250,150,150,1);
+    -fx-background-image: url('../image/logout.png');*/
+}
+#signout-button:hover{
+    -fx-cursor: hand;
+    -fx-background-color: #DA3F3F;
+}
+
+#home-button {
+    -fx-background-color:#3598DC;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+     -fx-pref-width: 80px;
+    -fx-pref-height: 30px;
+/*    -fx-pref-width: 80px;
+    -fx-pref-height: 20px;
+    -fx-background-color: #3598DC;
+    -fx-background-radius: 25px;
+    -fx-background-insets: 0px 0px 0px 0px;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-border-width: 5px;
+    -fx-border-radius: 15px;
+    -fx-border-color: #3598DC;*/
+}
+
+#home-button:hover{
+    -fx-cursor: hand;
+    -fx-background-color: #217EBD;
+}
+/*---------------------------LoginUI-------------------------*/
+
+.main-pane{
+    -fx-background-color:#35414F;
+}
+.inner-pane{
+    -fx-background-color:#EDEEF2;
+    -fx-alignment: CENTER;
+    /*-fx-border-color: #35414F;*/
+    -fx-border-radius: 20px;
+    -fx-border-width: 5px;
+    -fx-background-radius :25px;
+    -fx-effect : dropshadow(three-pass-box, black, 10, 0.3, 0, 0);
+    
+}
+.label-login{
+    -fx-text-fill:#5CA79D;
+    -fx-font-weight: bold;
+    -fx-font-size: 36px;
+    -fx-alignment: CENTER;
+    
+}
+
+.text-field-login{
+    -fx-background-color: #DCE3ED;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+.label-massage{
+    -fx-font-size: 12px;    
+    -fx-text-fill:red;
+}
+.label-forgotpass{
+     -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill:#C7CEDE;     
+}
+
+.label-forgotpass:hover{
+    -fx-cursor: hand;
+    }
+
+
+#login-form-button{
+    -fx-font-weight: bold;
+    -fx-text-fill:#E1FEFA; 
+    -fx-background-color: #44B5AF;
+}
+
+#login-form-button:hover{
+    -fx-cursor: hand;
+    -fx-background-color: #57E6DF;
+    
+}
+/*-------------Forgot Password UI---------------------*/
+
+.upper-pane{
+     -fx-background-color: #DFDFDF;
+}
+.lower-pane{
+    -fx-background-color: white;
+}
+.radio-button .text{
+   -fx-text-fill: #8C939F;
+   -fx-font-size : 14px; 
+   -fx-background-color: #8C939F;
+}
+.lbl-close{
+    -fx-text-fill: #EDEEF2;
+    -fx-font-size : 20px;
+    -fx-font-weight : bold;    
+}
+.lbl-close:hover{
+    -fx-cursor: hand;
+    -fx-text-fill: #6E88A4;
+}
+.lbl-close-small{
+    -fx-text-fill: #56697F;
+    -fx-font-size : 16px;    
+}
+.lbl-close-small:hover{
+    -fx-cursor: hand;
+     -fx-text-fill: #6E88A4;
+}
+/*--------------------Common-------------------------------*/
+.pane-form{
+  -fx-background-color: transparent;    
+}
+
+.pane-form-topic{
+    -fx-background-color: #3E4B5C;     
+}
+
+.label-form-topic{
+     -fx-text-fill: whitesmoke;
+    -fx-font-size : 18px;  
+    -fx-font-weight : bold;  
+}
+
+.label-normal{
+   -fx-text-fill: #333333;
+   -fx-font-size : 14px;  
+}
+
+.label-required{
+    -fx-text-fill: #E02222;
+}
+
+.label-addNew{
+    -fx-text-fill: #333333;
+   -fx-font-size : 14px;  
+   -fx-font-weight : bold;  
+}
+
+.label-addNew:hover{
+     -fx-cursor: hand;
+}
+
+.text-field-normal{
+    -fx-background-color: transparent;
+    -fx-border-color: #C2CAD8;
+     -fx-border-width: 2px;
+}
+.text-field-dissable{
+    -fx-background-color: #EEF1F5;
+    -fx-border-color: #C2CAD8;
+   
+}
+.text-field-dissable:hover{
+    -fx-cursor: default;
+}
+
+.button-normal{
+    -fx-background-color: #5B6D86;
+    -fx-text-fill: white;
+    -fx-font-size : 14px;  
+}
+.button-normal:hover{
+    -fx-background-color: #3E4B5C;
+    -fx-cursor: hand;
+}
+#combobox-dissable{
+    -fx-background-color: #EEF1F5;
+    -fx-border-color: #C2CAD8;
+}
+.combo-box{
+    -fx-background-color: transparent;
+    -fx-border-color: #C2CAD8;
+}
+.combo-box:hover{
+    -fx-cursor: hand;
+    -fx-background-color: #E6E6E6;
+}
+.text-area{
+    -fx-background-color: transparent;
+    -fx-border-color: #C2CAD8;
+}
+.combo-box .list-view .virtual-flow{
+    -fx-background-color: transparent;
+}

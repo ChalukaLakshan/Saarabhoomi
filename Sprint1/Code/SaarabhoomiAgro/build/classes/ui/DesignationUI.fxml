@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="316.0" prefWidth="534.0" style="-fx-background-color: transparent;" stylesheets="@../style/styleMainUI.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.DesignationUIController">
+   <children>
+      <Pane prefHeight="41.0" prefWidth="534.0" styleClass="upper-pane">
+         <children>
+            <Label fx:id="lblClose" layoutX="512.0" layoutY="8.0" onMouseClicked="#lblCloseMC" prefHeight="17.0" prefWidth="11.0" styleClass="lbl-close-small" text="×" />
+            <Label layoutX="11.0" layoutY="13.0" style="-fx-text-fill: #8C939F;" text="Add New Designation">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="46.0" layoutY="58.0" prefHeight="20.0" prefWidth="92.0" styleClass="label-normal" text="Designation :" />
+      <TextField fx:id="txtDesignation" layoutX="138.0" layoutY="56.0" onKeyReleased="#txtDesignationKR" prefHeight="29.0" prefWidth="207.0" promptText="Type here New Designation..." styleClass="text-field-normal" />
+      <ListView fx:id="lstDesignation" layoutX="364.0" layoutY="56.0" onKeyReleased="#lstDesignationKR" onMouseClicked="#lstDesignationMC" prefHeight="239.0" prefWidth="144.0" />
+      <Button fx:id="btnAdd" layoutX="138.0" layoutY="106.0" mnemonicParsing="false" onAction="#btnAddAP" prefHeight="30.0" prefWidth="66.0" styleClass="button-normal" text="Add" />
+      <Button fx:id="btnUpdate" layoutX="138.0" layoutY="161.0" mnemonicParsing="false" onAction="#btnUpdateAP" styleClass="button-normal" text="Update" />
+      <Button fx:id="btnDelete" layoutX="138.0" layoutY="210.0" mnemonicParsing="false" onAction="#btnDeleteAP" prefHeight="30.0" prefWidth="66.0" styleClass="button-normal" text="Delete" />
+      <Button fx:id="btnClear" layoutX="138.0" layoutY="257.0" mnemonicParsing="false" onAction="#btnClearAP" prefHeight="30.0" prefWidth="66.0" styleClass="button-normal" text="Clear" />
+   </children>
+</AnchorPane>

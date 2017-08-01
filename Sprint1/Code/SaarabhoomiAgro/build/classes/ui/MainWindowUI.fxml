@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.1717612809315866" prefHeight="705.0" prefWidth="1366.0" stylesheets="@../style/styleMainUI.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.MainWindowUIController">
+   <items>
+      <AnchorPane id="left-pane" minHeight="0.0" minWidth="0.0" prefHeight="705.0" prefWidth="240.0" styleClass="left-pane">
+         <children>
+            <AnchorPane layoutY="125.0" prefHeight="580.0" prefWidth="240.0">
+               <children>
+                  <Accordion maxHeight="580.0" prefHeight="580.0">
+                     <panes>
+                        <TitledPane animated="false" prefHeight="386.0" prefWidth="236.0" text="Master" textFill="WHITE">
+                           <content>
+                              <AnchorPane>
+                                 <children>
+                                    <VBox layoutY="-1.0" prefHeight="149.0" prefWidth="233.0">
+                                       <children>
+                                          <ToggleButton fx:id="btnEmployee" mnemonicParsing="false" onAction="#btnEmployeeAP" prefHeight="34.0" prefWidth="235.0" styleClass="sideBarToggleButton" stylesheets="@../style/styleMainUI.css" text="Employee">
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="toggle1" />
+                                             </toggleGroup>
+                                          </ToggleButton>
+                                          <ToggleButton fx:id="btnUser" mnemonicParsing="false" onAction="#btnUserAP" prefHeight="34.0" prefWidth="233.0" styleClass="sideBarToggleButton" stylesheets="@../style/styleMainUI.css" text="User" toggleGroup="$toggle1" />
+                                          <ToggleButton fx:id="btnSupplier" mnemonicParsing="false" onAction="#btnSupplierAP" prefHeight="34.0" prefWidth="234.0" styleClass="sideBarToggleButton" stylesheets="@../style/styleMainUI.css" text="Supplier" toggleGroup="$toggle1" />
+                                          <ToggleButton fx:id="btnRowMaterials" mnemonicParsing="false" onAction="#btnRowMaterialsAP" prefHeight="38.0" prefWidth="235.0" styleClass="sideBarToggleButton" stylesheets="@../style/styleMainUI.css" text="Row Materials Manegement" toggleGroup="$toggle1" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                        <TitledPane animated="false" prefHeight="567.0" prefWidth="205.0" text="Inventory" textFill="WHITE">
+                           <content>
+                              <AnchorPane>
+                                 <children>
+                                    <VBox layoutX="1.0" prefHeight="149.0" prefWidth="233.0">
+                                       <children>
+                                          <ToggleButton fx:id="btnGRN" mnemonicParsing="false" onAction="#btnGRNAP" prefHeight="34.0" prefWidth="235.0" styleClass="sideBarToggleButton" stylesheets="@../style/styleMainUI.css" text="GRN" toggleGroup="$toggle1" />
+                                          <ToggleButton fx:id="btnGRNReturn" mnemonicParsing="false" onAction="#btnGRNReturnAP" prefHeight="34.0" prefWidth="235.0" styleClass="sideBarToggleButton" stylesheets="@../style/styleMainUI.css" text="GRN Return">
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="toggle11" />
+                                             </toggleGroup>
+                                          </ToggleButton>
+                                          <ToggleButton fx:id="btnGoodsIssueNote" mnemonicParsing="false" onAction="#btnGoodsIssueNoteAP" prefHeight="34.0" prefWidth="235.0" styleClass="sideBarToggleButton" stylesheets="@../style/styleMainUI.css" text="Goods Issue Note">
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="toggle111" />
+                                             </toggleGroup>
+                                          </ToggleButton>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                        <TitledPane animated="false" prefHeight="567.0" prefWidth="205.0" text="Purchase" textFill="WHITE">
+                           <content>
+                              <AnchorPane>
+                                 <children>
+                                    <VBox layoutX="1.0" prefHeight="149.0" prefWidth="233.0">
+                                       <children>
+                                          <ToggleButton fx:id="btnPO" mnemonicParsing="false" onAction="#btnPOAP" prefHeight="34.0" prefWidth="235.0" styleClass="sideBarToggleButton" stylesheets="@../style/styleMainUI.css" text="PO" toggleGroup="$toggle1" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                        <TitledPane animated="false" prefHeight="567.0" prefWidth="205.0" text="Sales" textFill="WHITE">
+                           <content>
+                              <AnchorPane>
+                                 <children>
+                                    <VBox layoutX="1.0" prefHeight="149.0" prefWidth="233.0">
+                                       <children>
+                                          <ToggleButton fx:id="btnOrderManagement" mnemonicParsing="false" onAction="#btnOrderManagementAP" prefHeight="34.0" prefWidth="235.0" styleClass="sideBarToggleButton" stylesheets="@../style/styleMainUI.css" text="Order Management" toggleGroup="$toggle1" />
+                                          <ToggleButton fx:id="btnInvoicing" mnemonicParsing="false" onAction="#btnInvoicingAP" prefHeight="34.0" prefWidth="233.0" styleClass="sideBarToggleButton" stylesheets="@../style/styleMainUI.css" text="Invoicing" toggleGroup="$toggle1" />
+                                          <ToggleButton fx:id="btnSalesReturn" mnemonicParsing="false" onAction="#btnSalesReturnAP" prefHeight="34.0" prefWidth="234.0" styleClass="sideBarToggleButton" stylesheets="@../style/styleMainUI.css" text="Sales Return" toggleGroup="$toggle1" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                        <TitledPane animated="false" prefHeight="567.0" prefWidth="205.0" text="Production" textFill="WHITE">
+                           <content>
+                              <AnchorPane>
+                                 <children>
+                                    <VBox layoutX="1.0" prefHeight="149.0" prefWidth="233.0">
+                                       <children>
+                                          <ToggleButton fx:id="btnMRN" mnemonicParsing="false" onAction="#btnMRNAP" prefHeight="34.0" prefWidth="235.0" styleClass="sideBarToggleButton" stylesheets="@../style/styleMainUI.css" text="MRN" toggleGroup="$toggle1" />
+                                          <ToggleButton fx:id="btnSuperBioTreat" mnemonicParsing="false" onAction="#btnSuperBioTreatAP" prefHeight="34.0" prefWidth="233.0" styleClass="sideBarToggleButton" stylesheets="@../style/styleMainUI.css" text="Super Bio Treat - Solid Compost" toggleGroup="$toggle1" />
+                                          <ToggleButton fx:id="btnCropStar" mnemonicParsing="false" onAction="#btnCropStarAP" prefHeight="34.0" prefWidth="234.0" styleClass="sideBarToggleButton" stylesheets="@../style/styleMainUI.css" text="Crop Star - Organic Liquid Fertilizer" toggleGroup="$toggle1" />
+                                          <ToggleButton fx:id="btnBioGuard" mnemonicParsing="false" onAction="#btnBioGuardAP" prefHeight="38.0" prefWidth="235.0" styleClass="sideBarToggleButton" stylesheets="@../style/styleMainUI.css" text="BioGurad – Organic Pest Repellant" toggleGroup="$toggle1" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                        <TitledPane animated="false" prefHeight="469.0" prefWidth="230.0" text="Reports" textFill="WHITE">
+                           <content>
+                              <AnchorPane />
+                           </content>
+                        </TitledPane>
+                     </panes>
+                  </Accordion>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="125.0" prefWidth="236.0">
+               <children>
+                  <ImageView fx:id="imgUser" fitHeight="80.0" fitWidth="80.0" layoutX="78.0" layoutY="7.0" pickOnBounds="true" styleClass="imgUser">
+                     <image>
+                        <Image url="@../image/avatar3.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label id="user-label" fx:id="lblUser" alignment="CENTER" layoutX="14.0" layoutY="93.0" opacity="0.88" prefHeight="22.0" prefWidth="196.0" text="Chaluka Lakshan" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane id="right-pane" minHeight="0.0" minWidth="0.0" prefHeight="705.0" prefWidth="1126.0">
+         <children>
+            <AnchorPane layoutY="70.0" prefHeight="635.0" prefWidth="1126.0">
+               <children>
+                  <ImageView fitHeight="635.0" fitWidth="1126.0" opacity="0.05" pickOnBounds="true">
+                     <image>
+                        <Image url="@../image/Logo%20main3.png" />
+                     </image>
+                  </ImageView>
+                  <AnchorPane fx:id="apnMain" prefHeight="635.0" prefWidth="1126.0" style="-fx-background-color: transparent;" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="2.0" prefHeight="70.0" prefWidth="1126.0" styleClass="header-pane">
+               <children>
+                  <Button id="home-button" fx:id="btnHome" layoutX="904.0" layoutY="20.0" mnemonicParsing="false" onAction="#btnHomeAP" text="Home" />
+                  <Button id="signout-button" fx:id="btnSignOut" layoutX="1001.0" layoutY="20.0" mnemonicParsing="false" onAction="#btnSignOutAP" text="Log Out" />
+                  <ImageView fitHeight="66.0" fitWidth="123.0" layoutX="18.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/Logo%20main3.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="174.0" layoutY="25.0" prefHeight="27.0" prefWidth="578.0" styleClass="lbl-heager" text="Purcharse, Sales, Production and Inventory Management System">
+                     <font>
+                        <Font name="Calibri Bold Italic" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </items>
+</SplitPane>

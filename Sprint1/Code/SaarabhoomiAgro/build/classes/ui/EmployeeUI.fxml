@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane onKeyReleased="#closeTestKR" prefHeight="635.0" prefWidth="1126.0" styleClass="pane-form" stylesheets="@../style/styleMainUI.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.EmployeeUIController">
+   <children>
+      <Label layoutX="153.0" layoutY="57.0" styleClass="label-normal" text="Name :" />
+      <Label layoutX="146.0" layoutY="90.0" styleClass="label-normal" text="Gender :" />
+      <Label layoutX="619.0" layoutY="89.0" styleClass="label-normal" text="NIC :" />
+      <Label layoutX="144.0" layoutY="153.0" styleClass="label-normal" text="Address :" />
+      <Label layoutX="124.0" layoutY="228.0" styleClass="label-normal" text="Designation :" />
+      <Label layoutX="579.0" layoutY="123.0" prefHeight="17.0" prefWidth="76.0" styleClass="label-normal" text="Civil Status :" />
+      <Label layoutX="579.0" layoutY="227.0" styleClass="label-normal" text="Mobile No :" />
+      <Label layoutX="113.0" layoutY="259.0" styleClass="label-normal" text="Land Line No :" />
+      <Label layoutX="609.0" layoutY="262.0" styleClass="label-normal" text="E-Mail :" />
+      <Label layoutX="609.0" layoutY="158.0" styleClass="label-normal" text="Image :" />
+      <Label layoutX="105.0" layoutY="293.0" styleClass="label-normal" text="Assigned Date :" />
+      <Label layoutX="549.0" layoutY="296.0" styleClass="label-normal" text="Employee Status :" />
+      <Label layoutX="87.0" layoutY="506.0" styleClass="label-normal" text="Search By Name :" />
+      <Label layoutX="50.0" layoutY="539.0" styleClass="label-normal" text="Search By Designation :" />
+      <Label layoutX="22.0" layoutY="398.0" styleClass="label-normal" text="Search By Employee Status : " />
+      <Label layoutX="36.0" layoutY="434.0" styleClass="label-normal" text="Search By Employee NIC : " />
+      <TextField id="text-field-normal" fx:id="txtName" layoutX="209.0" layoutY="52.0" onKeyReleased="#txtNameKR" prefHeight="27.0" prefWidth="282.0" promptText="Type Name here" styleClass="text-field-normal" />
+      <TextField id="text-field-normal" fx:id="txtNIC" layoutX="662.0" layoutY="85.0" onKeyReleased="#txtNICKR" prefHeight="27.0" prefWidth="282.0" promptText="Type NIC here" styleClass="text-field-normal" />
+      <ComboBox fx:id="cmbGender" layoutX="209.0" layoutY="86.0" onAction="#cmbGenderAP" prefHeight="27.0" prefWidth="282.0" promptText="Select Gender" />
+      <TextArea fx:id="txtAdress" layoutX="209.0" layoutY="152.0" onKeyReleased="#txtAdressKR" prefHeight="67.0" prefWidth="282.0" promptText="Type Address here" />
+      <ComboBox fx:id="cmbDesignation" layoutX="209.0" layoutY="224.0" onAction="#cmbDesignationAP" prefHeight="27.0" prefWidth="282.0" promptText="Select Designation" />
+      <ComboBox fx:id="cmbCivilStatus" layoutX="662.0" layoutY="120.0" onAction="#cmbCivilStatusAP" prefHeight="27.0" prefWidth="282.0" promptText="Select Civil Status" />
+      <TextField id="text-field-normal" fx:id="txtMobile" layoutX="660.0" layoutY="223.0" onKeyReleased="#txtMobileKR" prefHeight="27.0" prefWidth="282.0" promptText="Type Mobile No here" styleClass="text-field-normal" />
+      <TextField id="text-field-normal" fx:id="txtLand" layoutX="209.0" layoutY="255.0" onKeyReleased="#txtLandKR" prefHeight="27.0" prefWidth="282.0" promptText="Type Land Line No here" styleClass="text-field-normal" />
+      <TextField id="text-field-normal" fx:id="txtMail" layoutX="660.0" layoutY="258.0" onKeyReleased="#txtMailKR" prefHeight="27.0" prefWidth="282.0" promptText="Type E-mail here" styleClass="text-field-normal" />
+      <DatePicker fx:id="dtpDob" layoutX="209.0" layoutY="119.0" onAction="#dtpDobAP" prefHeight="27.0" prefWidth="282.0" promptText="Select The Date of Birth" />
+      <Label layoutX="112.0" layoutY="123.0" styleClass="label-normal" text="Date of Birth :" />
+      <ImageView fx:id="imgEmployee" fitHeight="60.0" fitWidth="60.0" layoutX="767.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/account_circle_black.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnPhotoBrowse" layoutX="660.0" layoutY="155.0" mnemonicParsing="false" onAction="#btnPhotoBrowseAP" prefHeight="25.0" prefWidth="94.0" text="Browse" />
+      <Button fx:id="btnPhotoClear" layoutX="660.0" layoutY="185.0" mnemonicParsing="false" onAction="#btnPhotoClearAP" prefHeight="25.0" prefWidth="94.0" text="Clear" />
+      <DatePicker fx:id="dtpAssign" layoutX="207.0" layoutY="289.0" onAction="#dtpAssignAP" prefHeight="27.0" prefWidth="282.0" promptText="Select The Date of assigned" />
+      <ComboBox id="combobox-dissable" fx:id="cmbEmployeeStatus" layoutX="660.0" layoutY="293.0" onAction="#cmbEmployeeStatusAP" prefHeight="27.0" prefWidth="282.0" promptText="Select Employee Status" />
+      <TextField id="text-field-normal" fx:id="txtSearchName" layoutX="204.0" layoutY="502.0" onKeyReleased="#txtSearchNameKR" prefHeight="27.0" prefWidth="282.0" promptText="Type Name here" styleClass="text-field-normal" />
+      <ComboBox fx:id="cmbSearchDesignation" layoutX="204.0" layoutY="536.0" onAction="#cmbSearchDesignationAP" prefHeight="27.0" prefWidth="282.0" promptText="Select Designation" />
+      <ComboBox fx:id="cmbSearchEmployeeStatus" layoutX="204.0" layoutY="394.0" onAction="#cmbSearchEmployeeStatusAP" prefHeight="27.0" prefWidth="282.0" promptText="Select Employee Status" />
+      <TextField id="text-field-normal" fx:id="txtSearchByNIC" layoutX="204.0" layoutY="430.0" onKeyReleased="#txtSearchByNICKR" prefHeight="27.0" prefWidth="282.0" promptText="Type NIC here" styleClass="text-field-normal" />
+      <TableView fx:id="tblEmployee" layoutX="521.0" layoutY="395.0" onKeyReleased="#tblEmployeeKR" onMouseClicked="#tblEmployeeMC" prefHeight="169.0" prefWidth="585.0">
+        <columns>
+          <TableColumn fx:id="colEmployeeNumber" prefWidth="122.0" text="Employee Number" />
+          <TableColumn fx:id="colName" prefWidth="152.0" text="Name" />
+            <TableColumn fx:id="colDesignation" prefWidth="99.0" text="Designation" />
+            <TableColumn fx:id="colEmployeeStatus" prefWidth="209.0" text="Employee Status" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnAdd" layoutX="207.0" layoutY="328.0" mnemonicParsing="false" onAction="#btnAddAP" prefHeight="25.0" prefWidth="57.0" styleClass="button-normal" text="Add" />
+      <Button fx:id="btnUpdate" layoutX="274.0" layoutY="328.0" mnemonicParsing="false" onAction="#btnUpdateAP" styleClass="button-normal" text="Update" />
+      <Button fx:id="btnDelete" layoutX="348.0" layoutY="328.0" mnemonicParsing="false" onAction="#btnDeleteAP" styleClass="button-normal" text="Delete" />
+      <Button fx:id="btnClear" layoutX="421.0" layoutY="328.0" mnemonicParsing="false" onAction="#btnClearAP" prefHeight="30.0" prefWidth="66.0" styleClass="button-normal" text="Clear" />
+      <Button fx:id="btnClearSearch" layoutX="205.0" layoutY="586.0" mnemonicParsing="false" onAction="#btnClearSearchAP" prefHeight="27.0" prefWidth="96.0" text="Clear Search" />
+      <Button fx:id="btnSearchLock" layoutX="396.0" layoutY="587.0" mnemonicParsing="false" onAction="#btnSearchLockAP" prefHeight="25.0" prefWidth="73.0" text="Lock" />
+      <Label fx:id="lblAddNewDesignation" layoutX="501.0" layoutY="228.0" onMouseClicked="#lblAddNewDesignationMC" prefHeight="20.0" prefWidth="53.0" styleClass="label-addNew" text="+ New " />
+      <Pagination fx:id="pagination" layoutX="521.0" layoutY="394.0" prefHeight="228.0" prefWidth="585.0" />
+      <TextField fx:id="txtEmployeeNumber" layoutX="662.0" layoutY="53.0" onKeyReleased="#txtNameKR" prefHeight="27.0" prefWidth="282.0" promptText="Type Name here" styleClass="text-field-dissable" text="&lt;SYSTEM GENERATED NUMBER&gt;" />
+      <Label layoutX="528.0" layoutY="56.0" styleClass="label-normal" text="Employee Number :" />
+      <Label layoutX="14.0" layoutY="472.0" styleClass="label-normal" text="Search By Employee Number :" />
+      <TextField id="text-field-normal" fx:id="txtSearchEmployeeNumber" layoutX="204.0" layoutY="467.0" onKeyReleased="#txtSearchEmployeeNumberKR" prefHeight="27.0" prefWidth="282.0" promptText="Type Name here" styleClass="text-field-normal" />
+      <Pane prefHeight="34.0" prefWidth="1126.0" styleClass="pane-form-topic">
+         <children>
+            <Label layoutX="30.0" layoutY="5.0" prefHeight="27.0" prefWidth="211.0" styleClass="label-form-topic" text="Employee Management" />
+            <ImageView fitHeight="17.0" fitWidth="14.0" layoutX="12.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/gift.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Separator layoutX="7.0" layoutY="366.0" prefHeight="7.0" prefWidth="1107.0" />
+   </children>
+</AnchorPane>
